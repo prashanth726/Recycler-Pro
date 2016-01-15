@@ -101,7 +101,7 @@ public class FragmentOne extends Fragment implements SwipeRefreshLayout.OnRefres
 
         if(savedInstanceState==null){
 
-            Log.d("Hey","Imcsk knd");
+
             //load first page if starting up first time
             loadFeed(1, true);
 

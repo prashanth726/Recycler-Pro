@@ -114,6 +114,7 @@ public class NewsParcer {
     }
 
     return MovieList;
+
   }
 
 }

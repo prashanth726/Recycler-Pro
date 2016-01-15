@@ -58,8 +58,8 @@ public class ItemVideo extends NewsHolder {
 
     @Override public void Videobind(String Image, String title, String source, String permalink,
         Context context) {
- txtView.setText(title);
-sourc.setText(source);
+        txtView.setText(title);
+        sourc.setText(source);
         Drawable drawable1 = ContextCompat.getDrawable(context, R.drawable.ic_play_circle_outline_black_24dp);
         Drawable drawable = DrawableCompat.wrap(drawable1);
         DrawableCompat.setTint(drawable, Color.WHITE);

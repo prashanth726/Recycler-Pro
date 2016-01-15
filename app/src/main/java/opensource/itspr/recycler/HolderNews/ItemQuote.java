@@ -19,8 +19,8 @@ import opensource.itspr.recycler.R;
 public class ItemQuote extends NewsHolder {
 
     private TextView txtView;
-private ImageView imageView;
-private TextView autho;
+   private ImageView imageView;
+   private TextView autho;
 
     public ItemQuote(View itemView) {
         super(itemView);
@@ -45,6 +45,7 @@ private TextView autho;
 
         ColorDrawable colorDrawable = new ColorDrawable(Color.LTGRAY);
         Glide.with(context).load(Image).centerCrop().placeholder(colorDrawable).crossFade().into(imageView);
+
         //Picasso.with(context).load(Image).resize(300,150).centerCrop().into(imageView);
     }
 
