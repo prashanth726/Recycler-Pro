@@ -31,6 +31,7 @@ public class ItemVideo extends NewsHolder {
        imageView= (ImageView) itemView.findViewById(R.id.Poster);
         playIcon = (ImageView) itemView.findViewById(R.id.play);
         txtView = (TextView) itemView.findViewById(R.id.Title);
+      sourc = (TextView) itemView.findViewById(R.id.source);
 
 
     }
@@ -58,7 +59,7 @@ public class ItemVideo extends NewsHolder {
     @Override public void Videobind(String Image, String title, String source, String permalink,
         Context context) {
  txtView.setText(title);
-
+sourc.setText(source);
         Drawable drawable1 = ContextCompat.getDrawable(context, R.drawable.ic_play_circle_outline_black_24dp);
         Drawable drawable = DrawableCompat.wrap(drawable1);
         DrawableCompat.setTint(drawable, Color.WHITE);

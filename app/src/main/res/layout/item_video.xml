@@ -52,13 +52,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/rl_poster_title"
-                android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip"
-                android:layout_marginBottom="10.0dip">
+                android:layout_marginStart="10.0dip" android:layout_marginTop="10.0dip"
+                android:layout_marginBottom="10.0dip"
+             android:layout_marginLeft="10.0dip">
 
                 <TextView
                     android:id="@+id/Title"
                     android:textStyle="bold"
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="2"
                     android:textColor="@android:color/secondary_text_light"
@@ -66,6 +67,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_toStartOf="@+id/iv_card_share"
                     android:paddingRight="5dip"
+                    android:paddingLeft="5dip"
                     android:layout_toLeftOf="@+id/iv_card_share" />
 
                 <TextView
@@ -74,7 +76,10 @@
                     android:layout_height="wrap_content"
                     android:textSize="11.0sp"
                     tools:Text="Hai"
-                    android:layout_below="@+id/author"
+                    android:paddingStart="5dip"
+                    android:paddingEnd="5dip"
+                    android:paddingLeft="5dip"
+                    android:layout_below="@+id/Title"
                     />
 
                 <ImageView

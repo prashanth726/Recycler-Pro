@@ -13,12 +13,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-
 import opensource.itspr.recycler.Adapters.NewsAdapter;
 import opensource.itspr.recycler.Parcers.NewsParcer;
 import opensource.itspr.recycler.R;
@@ -186,8 +184,7 @@ public class FragmentOne extends Fragment implements SwipeRefreshLayout.OnRefres
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Log.d("Hey","Imcsk knd");
-                        Log.d("Resopnce",response);
+
 
                         if (reset) newsAdapter.set(NewsParcer.parse(response));
                         else newsAdapter.add(NewsParcer.parse(response));
@@ -201,7 +198,9 @@ public class FragmentOne extends Fragment implements SwipeRefreshLayout.OnRefres
                         Log.d("Resopnce", String.valueOf(error));
                         mSwipeRefreshLayout.setRefreshing(false);
                         showDialog(getActivity());
-                        Toast.makeText(getActivity(), "Slow or Bad Internet Connection", Toast.LENGTH_SHORT).show();
+                        //Snackbar.make(root, "Slow OR Bad Internet Connection", Snackbar.LENGTH_LONG)
+                        //    .setAction("Action", null).show();
+                        Toast.makeText(getActivity(), "Slow OR Bad Internet Connection", Toast.LENGTH_SHORT).show();
                         //Snackbar.make(root, "Something went wrong", Snackbar.LENGTH_SHORT);
                     }
                 });
