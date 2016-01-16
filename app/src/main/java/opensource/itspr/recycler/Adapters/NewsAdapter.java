@@ -1,5 +1,6 @@
 package opensource.itspr.recycler.Adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -9,11 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-
 import com.android.volley.toolbox.ImageLoader;
-
 import java.util.ArrayList;
-
 import opensource.itspr.recycler.HolderNews.ItemImage;
 import opensource.itspr.recycler.HolderNews.ItemLink;
 import opensource.itspr.recycler.HolderNews.ItemQuote;
@@ -30,11 +28,13 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsHolder> {
     private ArrayList<Movies> storyList = new ArrayList<>();
     private Context mContext;
     private ImageLoader mImageLoader;
+    private  Activity activityy;
 
 
-    public NewsAdapter(Context context){
+    public NewsAdapter(Context context,Activity activity){
         mContext = context;
         mImageLoader = CustomVolley.getInstance(mContext).getImageLoader();
+        activityy=activity;
     }
 
     public static final int VIEW_TYPE_LINK = 0;
@@ -72,14 +72,15 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsHolder> {
 
         if (viewType == VIEW_TYPE_LINK) {
             itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_link, parent, false);
-            return new ItemLink(itemView);
+            return new ItemLink(itemView,activityy);
+
         }
 
         if (viewType == VIEW_TYPE_VIDEO) {
             itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_video, parent, false);
             ImageView image= (ImageView) itemView.findViewById(R.id.Poster);
             image.setColorFilter(Color.GRAY, PorterDuff.Mode.MULTIPLY);
-            return new ItemVideo(itemView);
+            return new ItemVideo(itemView,activityy);
         }
         if (viewType == VIEW_TYPE_IMAGE)
         {

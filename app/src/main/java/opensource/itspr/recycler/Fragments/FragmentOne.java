@@ -53,7 +53,7 @@ public class FragmentOne extends Fragment implements SwipeRefreshLayout.OnRefres
 
         super.onCreate(savedInstanceState);
         //setHasOptionsMenu(true);
-        newsAdapter  =new NewsAdapter(getActivity());
+        newsAdapter  =new NewsAdapter(getActivity(),getActivity());
 
     }
 
@@ -121,6 +121,8 @@ public class FragmentOne extends Fragment implements SwipeRefreshLayout.OnRefres
         }
         return root;
     }
+
+
 
     @Override
     public void onSaveInstanceState(Bundle outState) {

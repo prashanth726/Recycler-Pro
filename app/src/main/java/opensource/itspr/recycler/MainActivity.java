@@ -1,6 +1,8 @@
 package opensource.itspr.recycler;
 
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.customtabs.CustomTabsIntent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
@@ -13,12 +15,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import opensource.itspr.recycler.Fragments.FragmentOne;
 import opensource.itspr.recycler.Fragments.FragmentTwo;
+import opensource.itspr.recycler.Util.customtabs.CustomTabActivityHelper;
+import opensource.itspr.recycler.Util.customtabs.WebviewFallback;
 
 public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
@@ -100,7 +102,9 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();
+            CustomTabActivityHelper.openCustomTab(
+                  MainActivity.this, intentBuilder.build(), Uri.parse("http://google.com"), new WebviewFallback());
         }
 
         return super.onOptionsItemSelected(item);
