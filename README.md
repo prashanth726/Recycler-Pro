@@ -1,11 +1,15 @@
-# Recycler
-Tablayout + RecyclerView + Endless Recycler + Recycler With ViewTypes+ Card View + Swipe TO Refresh + Volley + Glide
+<h1 id="recycler-pro">Recycler - PRO</h1>
 
-This Project Contains
-1)TabLayout with Two Tabs and Two Fragments
-2)RecyclerView
-3)Endless RecyclerView
-4)RecyclerView with Different ViewTypes
-5)Card Vew with 4 different layouts
-6)Swipe  to Refresh Implementation
-5)Json Network Request with Volley and Image Loading with Gide
+<p>This Project Contains Implementation of Following Concepts <br>
+1)TabLayout with Two Tabs and Two Fragments <br>
+2)RecyclerView <br>
+3)Endless RecyclerView <br>
+4)RecyclerView with Different ViewTypes <br>
+5)Card View with 4 different layouts <br>
+6)Swipe  to Refresh Implementation <br>
+7) JSON Network Requests with Volley and Image Loading With Glide <br>
+8)Implemented Chrome Custom Tabs</p>
+
+<hr>
+
+<hr>
